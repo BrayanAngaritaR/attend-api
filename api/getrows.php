@@ -5,10 +5,10 @@ use \Tsugi\Core\LTIX;
 use \Tsugi\Util\Net;
 
 $LAUNCH = LTIX::requireData(); 
-if ( ! $USER->instructor ) {
-    $OUTPUT->jsonError('not authorized');
-    return;
-}
+// if ( ! $USER->instructor ) {
+//     $OUTPUT->jsonError('not authorized');
+//     return;
+// }
 
 $rows = $PDOX->allRowsDie("SELECT A.user_id,attend,A.ipaddr, displayname, email
             FROM {$CFG->dbprefix}attend AS A
@@ -16,6 +16,8 @@ $rows = $PDOX->allRowsDie("SELECT A.user_id,attend,A.ipaddr, displayname, email
             WHERE link_id = :LI ORDER BY attend DESC, user_id",
      array(':LI' => $LINK->id)
 );
+
+var_dump($rows);
 
 foreach($rows as $row) {
     $displayname = $row['user_id'];
