@@ -2,13 +2,13 @@
 
 // The SQL to uninstall this tool
 $DATABASE_UNINSTALL = array(
-"drop table if exists {$CFG->dbprefix}attend"
+"drop table if exists {$CFG->dbprefix}attend_api"
 );
 
 // The SQL to create the tables if they don't exist
 $DATABASE_INSTALL = array(
-array( "{$CFG->dbprefix}attend",
-"create table {$CFG->dbprefix}attend (
+array( "{$CFG->dbprefix}attend_api",
+"create table {$CFG->dbprefix}attend_api (
     link_id     INTEGER NOT NULL,
     user_id     INTEGER NOT NULL,
     attend      DATE NOT NULL,

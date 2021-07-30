@@ -11,7 +11,7 @@ $LAUNCH = LTIX::requireData();
 // }
 
 $rows = $PDOX->allRowsDie("SELECT A.user_id,attend,A.ipaddr, displayname, email
-            FROM {$CFG->dbprefix}attend AS A
+            FROM {$CFG->dbprefix}attend_api AS A
             JOIN {$CFG->dbprefix}lti_user AS U ON U.user_id = A.user_id
             WHERE link_id = :LI ORDER BY attend DESC, user_id",
      array(':LI' => $LINK->id)
