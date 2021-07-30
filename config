@@ -1,0 +1,9 @@
+{
+    "database_connection": {
+        "server": "localhost",
+        "user:" : "brayanangarita",
+        "database": "tsugi",
+        "password": "passAngarita05112021!webdb",
+        "port": "3306"
+    }
+}

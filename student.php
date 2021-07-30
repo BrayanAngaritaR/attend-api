@@ -1,5 +1,6 @@
 <?php
 require_once "../config.php";
+require_once "../students.php";
 
 // The Tsugi PHP API Documentation is available at:
 // http://do1.dr-chuck.com/tsugi/phpdoc/namespaces/Tsugi.html
@@ -12,6 +13,8 @@ use \Tsugi\Util\Net;
 
 // No parameter means we require CONTEXT, USER, and LINK
 $LAUNCH = LTIX::requireData(); 
+
+$connection = new connection;
 
 // Model
 $old_code = Settings::linkGet('code', '');
