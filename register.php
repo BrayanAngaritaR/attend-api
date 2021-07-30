@@ -1,10 +1,10 @@
 <?php
 
 $REGISTER_LTI2 = array(
-"name" => "Attendance Tool",
+"name" => "Attendance Tool API",
 "FontAwesome" => "fa-server",
-"short_name" => "Attendance Tool",
-"description" => "This is an experimental version of the assignments tool to explore React support for Tsugi.",
+"short_name" => "Attendance Tool API",
+"description" => "This is an experimental API to use the assignments tool to explore React support for Tsugi.",
     // By default, accept launch messages..
     "messages" => array("launch"),
     "tool_phase" => "react",
@@ -13,7 +13,7 @@ $REGISTER_LTI2 = array(
     "languages" => array(
         "English", "Spanish"
     ),
-    "source_url" => "https://github.com/csev/rattend",
+    "source_url" => "https://github.com/BrayanAngaritaR/attend-api.git",
     // For now Tsugi tools delegate this to /lti/store
     "placements" => array(
         /*
