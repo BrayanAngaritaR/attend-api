@@ -21,7 +21,8 @@ $OUTPUT->header();
 $OUTPUT->bodyStart();
 $OUTPUT->topNav();
 
-var_dump($old_code);
+$php_session_code = U::addSession('student.php');
+var_dump($php_session_code);
 
 ?>
 <p> The old code is </p>
