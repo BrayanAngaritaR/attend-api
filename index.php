@@ -13,9 +13,7 @@ use \Tsugi\Util\Net;
 // No parameter means we require CONTEXT, USER, and LINK
 $LAUNCH = LTIX::requireData(); 
 
-echo "Hello, this is a test. The user variable is:";
-//echo $LAUNCH;
-echo $USER;
+var_dump(USER);
 
 if ( ! $USER->instructor ) {
     header( 'Location: '.U::addSession('student.php') ) ;
