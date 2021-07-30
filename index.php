@@ -14,7 +14,7 @@ use \Tsugi\Util\Net;
 $LAUNCH = LTIX::requireData(); 
 
 if ( ! $USER->instructor ) {
-    header( 'Location: '.U::addSession('student.php') ) ;
+    //header( 'Location: '.U::addSession('student.php') ) ;
     echo "User is an student";
     return;
 }
