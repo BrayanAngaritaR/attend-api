@@ -1,6 +1,6 @@
 <?php
 require_once "../config.php";
-require_once "students.php";
+require_once "connection.php";
 
 // The Tsugi PHP API Documentation is available at:
 // http://do1.dr-chuck.com/tsugi/phpdoc/namespaces/Tsugi.html
@@ -14,6 +14,7 @@ use \Tsugi\Util\Net;
 // No parameter means we require CONTEXT, USER, and LINK
 $LAUNCH = LTIX::requireData(); 
 
+//Require connection class
 $connection = new connection;
 
 // Model
