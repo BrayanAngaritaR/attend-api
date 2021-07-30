@@ -1,6 +1,6 @@
 <?php
 require_once "../config.php";
-require_once "connection.php";
+require_once "class/base/connection.php";
 
 // The Tsugi PHP API Documentation is available at:
 // http://do1.dr-chuck.com/tsugi/phpdoc/namespaces/Tsugi.html
