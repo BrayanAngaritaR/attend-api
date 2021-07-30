@@ -15,12 +15,12 @@ array( "{$CFG->dbprefix}attend_api",
     ipaddr      VARCHAR(64),
     updated_at  DATETIME NOT NULL,
 
-    CONSTRAINT `{$CFG->dbprefix}attend_ibfk_1`
+    CONSTRAINT `{$CFG->dbprefix}attend_api_ibfk_1`
         FOREIGN KEY (`link_id`)
         REFERENCES `{$CFG->dbprefix}lti_link` (`link_id`)
         ON DELETE CASCADE ON UPDATE CASCADE,
 
-    CONSTRAINT `{$CFG->dbprefix}attend_ibfk_2`
+    CONSTRAINT `{$CFG->dbprefix}attend_api_ibfk_2`
         FOREIGN KEY (`user_id`)
         REFERENCES `{$CFG->dbprefix}lti_user` (`user_id`)
         ON DELETE CASCADE ON UPDATE CASCADE,
