@@ -23,7 +23,7 @@ $OUTPUT->topNav();
 
 ?>
 <p> The old code is </p>
-<p> $old_code </p>
+<p> <?= $old_code ?></p>
 <p><?= __("Enter code:") ?></p>
 <form method="post">
     <input type="text" name="code" id="code" value="">
