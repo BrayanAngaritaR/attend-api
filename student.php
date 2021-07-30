@@ -21,9 +21,10 @@ $OUTPUT->header();
 $OUTPUT->bodyStart();
 $OUTPUT->topNav();
 
+var_dump($old_code);
+
 ?>
 <p> The old code is </p>
-<p> <?= $old_code ?></p>
 <p><?= __("Enter code:") ?></p>
 <form method="post">
     <input type="text" name="code" id="code" value="">
