@@ -46,6 +46,7 @@ class connection {
       return $array;
    }
 
+   //Get data from database
    public function getData($query){
       $results = $this->db_connection->query($query);
       $resultsArray = array();
@@ -55,6 +56,23 @@ class connection {
       }
 
       return $this->convertToUTF8($resultsArray);
+   }
+
+   //Save data into database
+   public function nonQuery($query){
+      $results = $this->db_connection->query($query);
+      return $this->db_connection->affected_rows;
+   }
+
+   public function nonQueryId($query){
+      $results = $this->db_connection->query($query);
+      $rows = $this->db_connection->affected_rows;
+      
+      if($row >= 1){
+         return $this->db_connection->insert_id;
+      } else {
+         return 0;
+      }
    }
      
 }
