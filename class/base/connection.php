@@ -20,8 +20,7 @@ class connection {
       }
 
       $this->db_connection = new mysqli($this->server, $this->user, $this->password, $this->database, $this->port);
-      //$this->db_connection = new mysqli("localhost", "brayanangarita", "passAngarita05112021!webdb", "tsugi", "3306");
-
+      
       if($this->db_connection->connect_errno){
          echo "We are not ready for database connection";
          die();
@@ -64,6 +63,7 @@ class connection {
       return $this->db_connection->affected_rows;
    }
 
+   //Insert data and returns latest ID inserted
    public function nonQueryId($query){
       $results = $this->db_connection->query($query);
       $rows = $this->db_connection->affected_rows;

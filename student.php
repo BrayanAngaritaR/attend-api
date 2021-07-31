@@ -17,7 +17,8 @@ $LAUNCH = LTIX::requireData();
 //Require connection class
 $connection = new connection;
 
-$query = "SELECT * from lti_user";
+//$query = "SELECT * from lti_user";
+$query = "INSERT into attend_api (link_id, user_id, attend, ipaddr, updated_at) VALUES (1, 2, '2021-07-30', '186.86.32.186', '2021-07-30 21:26:02')";
 print_r($connection->getData($query));
 
 // Model
