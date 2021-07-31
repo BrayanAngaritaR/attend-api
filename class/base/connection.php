@@ -25,6 +25,8 @@ class connection {
       if($this->db_connection->connect_errno){
          echo "We are not ready for database connection";
          die();
+      } else {
+         echo "Database connection has been established";
       }
    }
 
