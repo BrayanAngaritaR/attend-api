@@ -11,7 +11,8 @@ require_once "../config.php";
 // use \Tsugi\Util\Net;
 
 echo "Redirecting";
-header( 'Location: '.U::addSession('auth.php') ) ;
+header( 'Location: '.'auth.php' ) ;
+//header( 'Location: '.U::addSession('auth.php') ) ;
 return;
 
 // No parameter means we require CONTEXT, USER, and LINK
