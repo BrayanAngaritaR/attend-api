@@ -29,7 +29,7 @@ class connection {
 
    private function connection_data() {
       $url = dirname(__FILE__);
-      $jsonData = file_get_contents($url . "/" . "config");
+      $jsonData = file_get_contents($url . "/../../" . "config");
       echo json_decode($jsonData, true);
       return;
    }
