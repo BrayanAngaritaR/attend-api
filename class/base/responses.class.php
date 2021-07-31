@@ -13,7 +13,7 @@ class responses {
          'error_id' => "405",
          'error_message' => 'Method not allowed'
       );
-      return $response;
+      return $this->response;
    }
 
    public function error_200($string = 'Incorrect data'){
@@ -22,7 +22,7 @@ class responses {
          'error_id' => "200",
          'error_message' => $string
       );
-      return $response;
+      return $this->response;
    }
 
    public function error_400(){
@@ -31,7 +31,7 @@ class responses {
          'error_id' => "400",
          'error_message' => "Route not found"
       );
-      return $response;
+      return $this->response;
    }
 }
 
