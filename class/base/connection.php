@@ -19,8 +19,8 @@ class connection {
          $this->port = $value['port'];
       }
 
-      //$this->db_connection = new mysqli($this->server, $this->user, $this->password, $this->database, $this->port);
-      $this->db_connection = new mysqli("localhost", "brayanangarita", "passAngarita05112021!webdb", "tsugi", "3306");
+      $this->db_connection = new mysqli($this->server, $this->user, $this->password, $this->database, $this->port);
+      //$this->db_connection = new mysqli("localhost", "brayanangarita", "passAngarita05112021!webdb", "tsugi", "3306");
 
       if($this->db_connection->connect_errno){
          echo "We are not ready for database connection";
