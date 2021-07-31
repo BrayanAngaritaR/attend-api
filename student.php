@@ -17,6 +17,9 @@ $LAUNCH = LTIX::requireData();
 //Require connection class
 $connection = new connection;
 
+$query = "SELECT * from lti_user";
+print_r($connection->getData($query));
+
 // Model
 $old_code = Settings::linkGet('code', '');
 

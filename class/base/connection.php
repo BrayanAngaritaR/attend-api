@@ -35,6 +35,27 @@ class connection {
       $jsonData = file_get_contents($url . "/../../" . "config");
       return json_decode($jsonData, true);
    }
+
+   private function convertToUTF8($array){
+      array_walk_recursive($array, function(&$item, $key){
+         if(!mb_detect_encoding($item, 'utf-8', true)){
+            $item = utf8_encode($item);
+         }
+      });
+
+      return $array;
+   }
+
+   public function getData($query){
+      $results = $this->db_connection->query($query);
+      $resultsArray = array();
+
+      foreach($results as $key){
+         $resultsArray[] = $key;
+      }
+
+      return $this->convertToUTF8($resultsArray);
+   }
      
 }
 
