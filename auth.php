@@ -7,8 +7,10 @@ require_once 'class/base/responses.class.php';
 $_responses = new responses;
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $postBody = file_get_contents("php://input");
-    print_r($postBody);
+    // $postBody = file_get_contents("php://input");
+    // print_r($postBody);
+    echo "You got it";
+    return;
 } else {
     echo "Method not allowed";
 }
