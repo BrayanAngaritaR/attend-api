@@ -63,7 +63,7 @@ class connection {
       return $this->db_connection->affected_rows;
    }
 
-   //Insert data and returns latest ID inserted
+   //Get the last id of the table
    public function nonQueryId($query){
       $results = $this->db_connection->query($query);
       $rows = $this->db_connection->affected_rows;
