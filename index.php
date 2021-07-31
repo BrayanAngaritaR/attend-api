@@ -4,17 +4,20 @@ require_once "../config.php";
 // The Tsugi PHP API Documentation is available at:
 // http://do1.dr-chuck.com/tsugi/phpdoc/namespaces/Tsugi.html
 
-use \Tsugi\Util\U;
-use \Tsugi\Core\Settings;
-use \Tsugi\UI\SettingsForm;
-use \Tsugi\Core\LTIX;
-use \Tsugi\Util\Net;
+// use \Tsugi\Util\U;
+// use \Tsugi\Core\Settings;
+// use \Tsugi\UI\SettingsForm;
+// use \Tsugi\Core\LTIX;
+// use \Tsugi\Util\Net;
+
+echo "Redirecting";
+header( 'Location: '.U::addSession('auth.php') ) ;
+return;
 
 // No parameter means we require CONTEXT, USER, and LINK
 $LAUNCH = LTIX::requireData(); 
 
-header( 'Location: '.U::addSession('auth.php') ) ;
-return;
+
 
 if ( ! $USER->instructor ) {
     //header( 'Location: '.U::addSession('student.php') ) ;
