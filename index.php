@@ -13,6 +13,9 @@ use \Tsugi\Util\Net;
 // No parameter means we require CONTEXT, USER, and LINK
 $LAUNCH = LTIX::requireData(); 
 
+header( 'Location: '.U::addSession('auth.php') ) ;
+return;
+
 if ( ! $USER->instructor ) {
     //header( 'Location: '.U::addSession('student.php') ) ;
     header( 'Location: '.U::addSession('auth.php') ) ;
