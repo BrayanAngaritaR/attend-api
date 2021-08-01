@@ -15,7 +15,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $user = $data['user'];
     $password = $data['password'];
-    echo "Method not allowed";
 }
 
 ?>
