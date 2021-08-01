@@ -10,6 +10,7 @@ $connection = new connection;
 $query = "SELECT * FROM attend";
 
 print_r($connection->getData($query));
+echo "This is a getUsers.php file";
 
 
 ?>
