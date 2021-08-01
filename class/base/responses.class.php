@@ -29,7 +29,7 @@ class responses {
       $this->response['status'] = "error";
       $this->response['result'] = array(
          'error_id' => "400",
-         'error_message' => "Route not found"
+         'error_message' => "Wrong information"
       );
       return $this->response;
    }

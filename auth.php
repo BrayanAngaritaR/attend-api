@@ -8,9 +8,13 @@ $_responses = new responses;
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $postBody = file_get_contents("php://input");
-    print_r($postBody);
+    $dataArray = $_auth->login($postBody);
+    print_r(json_decode($dataArray));
     
 } else {
+
+    $user = $data['user'];
+    $password = $data['password'];
     echo "Method not allowed";
 }
 

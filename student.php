@@ -18,8 +18,16 @@ $LAUNCH = LTIX::requireData();
 $connection = new connection;
 
 //$query = "SELECT * from lti_user";
-$query = "INSERT into attend_api (link_id, user_id, attend, ipaddr, updated_at) VALUES (1, 3, '2021-07-30', '186.86.32.186', '2021-07-30 21:26:02')";
-print_r($connection->nonQuery($query));
+//$query = "INSERT into attend_api (link_id, user_id, attend, ipaddr, updated_at) VALUES (1, 3, '2021-07-30', '186.86.32.186', '2021-07-30 21:26:02')";
+//print_r($connection->nonQuery($query));
+$query = $PDOX->allRowsDie("SELECT A.user_id,attend,A.ipaddr, displayname, email
+            FROM {$CFG->dbprefix}attend AS A
+            JOIN {$CFG->dbprefix}lti_user AS U ON U.user_id = A.user_id
+            WHERE link_id = :LI ORDER BY attend DESC, user_id",
+     array(':LI' => $LINK->id)
+);
+
+print_r($connection->getData($query));
 
 // Model
 $old_code = Settings::linkGet('code', '');
